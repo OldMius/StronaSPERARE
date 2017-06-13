@@ -1,6 +1,6 @@
 body
 {
-	background-color: 	#b3ffff;
+	background-color: 	#0AE844;
 	color: #000066;
 }
 
@@ -9,12 +9,12 @@ body
 	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #9999ff;
+	
 }
 
 #header
 {
-	background-color: #b3ffff;
+	background-color: #d1dbbd;
 	height: 130px;
 	
 }
@@ -35,15 +35,37 @@ body
 }
 	
 	
-.content
+#content
 {
 	clear: both;
-	
+	background-color: #3e606f;
 	height: 500px;
+}
+
+.contentL
+{
+	height: 100%;
+	float: left;
+	width: 60%;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: justify;
+	border: solid;
+}
+
+.contentR
+{
+	background-color: #ffffff;
+	height: 100%;
+	float: left;
+	width: 35%;
+	border: solid;
+	
 }
 	
 .footer
 {
+	clear: both;
 	text-align: center;
 	
 }
