@@ -42,7 +42,8 @@ body
 
 .nav
 {
-	margin-top: 50px;
+	margin-top: 35px;
+	margin-bottom: 10px;
 	float: left;
 	text-align: center;
 	
@@ -51,14 +52,14 @@ body
 
 #MidBar
 {
-	border-top: 10px solid #dddeee;
+	border-top: 15px solid #4e4f97;
 	overflow: hidden;
 	width: 100%;
 	clear: both;
 	background-image: url("img/tlo2.jpg");
 	margin: 0;
-	overflow: hidden;
 	color: #99c2ff;
+	text-align: center;
 }
 
 .MidBarL
@@ -76,6 +77,7 @@ body
 {
 	color: #ffffff;
 	text-align: center;
+	font-size: 34px;
 }
 
 .MidBarL > h2
@@ -98,40 +100,112 @@ body
 	overflow: hidden;
 	clear: both;
 	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .contentL
 {
-	margin-left: 20px;
+	
 	float: left;
-	width: 55%;
-	text-align: center;
-	display:inline-block;
+	width: 50%;
+	text-align: left;
+	margin-left: 20px;
+	border: 2px solid #4e4f97;
+	border-top-width: 5px;
+	border-radius: 5px;
+}
+
+.contentL h1
+{
+	/*font-size: 14px;
+	color: red;*/
+}
+
+.contentL h2
+{
+	/*ont-size: 14px;
+	color: gray;*/
+}
+
+.contentL h3
+{
+	font-size: 14px;
+	color: gray;
 }
 
 .contentR
 {
-	margin-left: 10px;
-	display:inline-block;
-	/*padding:20px;*/
+	padding:10px;
 	text-align: right;
 	float: left;
-	width: 40%;
-	
-
+	width: 45%;
 }
 	
-.footer
+#footer
 {
-	
-	
 	background-color: #a6a6a6;
 	clear: both;
-	text-align: center;
+	text-align: left;
 	margin: 0;
+	overflow: hidden;
 }
 
-ol
+.navFooter
+{
+	clear: both;
+	width: 100%;
+}
+
+.navFooterL
+{
+	width: 70%;
+	float: left;
+	text-align: right;
+	
+}
+
+.navFooterR
+{
+	width: 20%;
+	float: left;
+	text-align: right;
+	margin-left: 50px;
+	
+}
+
+.bottomMenu
+{
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	
+	display: inline-block;
+}
+
+.bottomMenu a
+{
+	text-decoration: none;
+	display: block;
+}
+
+.bottomMenu li
+{
+	
+	float: left;
+	padding: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.bottomMenu li a:hover
+{
+	/*background-color: #ffffff; /*#a6a6a6;*/
+	color: #000000;
+}
+
+.topMenu
 {
 	padding: 0;
 	margin: 0;
@@ -140,23 +214,23 @@ ol
 	display: inline-block;
 }
 
-ol a
+.topMenu a
 {
 	
 	text-decoration: none;
 	display: block;
 }
 
-ol > li
+.topMenu li
 {
 	
 	float: left;
-	
+	padding: 20px;
 	margin-left: 20px;
 	margin-right: 20px;
 }
 
-ol > li:hover
+.topMenu li:hover
 {
 	background-color: #e6ffff;
 }
@@ -180,7 +254,11 @@ ol > li:hover
 
 .rekaLogoImg
 {
+	margin-top: 50px;
+	border: 5px solid #4e4f97;
+	border-radius: 15px;
 	background: url(img/reka3.png) no-repeat;
-	width: 300px;
-	height: 225px;
+	width: 400px;
+	height: 300px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
