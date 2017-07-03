@@ -59,7 +59,7 @@ body
 	background-image: url("img/tlo2.jpg");
 	margin: 0;
 	color: #99c2ff;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .MidBarL
@@ -162,6 +162,7 @@ body
 	width: 70%;
 	float: left;
 	text-align: right;
+	border: 1px solid red;
 	
 }
 
@@ -171,7 +172,7 @@ body
 	float: left;
 	text-align: right;
 	margin-left: 50px;
-	
+	border: 1px solid red;
 }
 
 .bottomMenu
@@ -254,7 +255,7 @@ body
 
 .rekaLogoImg
 {
-	margin-top: 50px;
+	margin-top: 30px;
 	border: 5px solid #4e4f97;
 	border-radius: 15px;
 	background: url(img/reka3.png) no-repeat;
