@@ -25,7 +25,7 @@ body
 .logo
 {
 	float: left;
-	width: 30%;
+	width: 20%;
 	text-align: center;
 	height: 100%;
 	line-height: 0,5;
@@ -51,7 +51,7 @@ body
 	float: left;
 	text-align: center;
 	
-	width: 70%;
+	width: 80%;
 }
 
 #MidBar
@@ -141,6 +141,16 @@ body
 .contentL h4
 {
 	font-size: 14px;
+}
+
+#Tuslugi
+{
+	border-spacing: 1.2rem;
+}
+
+.pierwszy
+{
+	width: 30%;
 }
 
 .contentR
@@ -305,10 +315,26 @@ body
 
 img 
 {
-margin-right: 15px; 
-margin-bottom: 8px; 
-border: 1px solid silver; 
-background: white; padding: 4px;
-border-radius: 3px;
-box-shadow: 1px 1px 3px silver; 
+	margin-right: 15px; 
+	margin-bottom: 8px; 
+	border: 1px solid silver; 
+	background: white; padding: 4px;
+	border-radius: 3px;
+	box-shadow: 1px 1px 3px silver; 
+}
+
+.error
+{
+	color: red;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.gui
+{
+	margin-left: 30px;
+	width: 100px;
+	border: 1px solid red;
+	clear: both;
+	padding-left: 30px;
 }

@@ -1,0 +1,27 @@
+/*
+	//sprawdź czy wpisano cokolwiek w pole user
+	if(isset($_POST['user']))
+	{
+		$wszystko_OK=true;
+		
+		//sprawdzam poprawność nazwy użytkownika
+		$nick = $_POST['login'];
+		
+		//długość nazwy użytkownika
+		if((strlen($nick) < 3) || (strlen($nick) > 20))
+		{
+			$wszystko_OK=false;
+			$_SESSION['e_nick']="Nazwa użytkownika musi posiadać od 3 do 20 znaków";
+		}
+		
+		if($wszystko_OK==true)
+		{
+			echo "Udana zmiana danych";
+			exit();
+		}
+		else
+		{
+			header('Location: zmianadanych.php');
+			exit();
+		}
+	}*/
