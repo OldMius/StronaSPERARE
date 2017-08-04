@@ -33,6 +33,7 @@
 						
 				$_SESSION['id'] = $wiersz['id'];
 				$_SESSION['user'] = $wiersz['name'];
+				$_SESSION['pass'] = $wiersz['password'];
 				$_SESSION['privilages'] = $wiersz['privilages'];
 				$_SESSION['firma'] = $wiersz['firma'];
 				

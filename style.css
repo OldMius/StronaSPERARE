@@ -333,8 +333,13 @@ img
 .gui
 {
 	margin-left: 30px;
-	width: 100px;
-	border: 1px solid red;
+	width: 600px;
+	
 	clear: both;
-	padding-left: 30px;
+	
+}
+
+.gui a
+{
+	text-decoration: none;
 }

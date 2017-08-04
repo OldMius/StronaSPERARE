@@ -28,12 +28,22 @@ session_start();
 		<div class="gui">
 
 		<?php
-			echo "<p>BAZA!!!! witaj: ".$_SESSION['user'].' *** --[ <a href="logout.php">Wyloguj się!</a> ]-- '.'  -- [ <a href="zmianadanych.php">Zmiana Danych!</a> ] -- </br></p>';
-			echo "ID:".$_SESSION['id']."</br>";
-			echo "uprawnienia:".$_SESSION['privilages']."</br>";
-			echo "Firma:".$_SESSION['firma']."</br>";
-	
+			echo "</br>Witaj: ".$_SESSION['user'].' *** --[ <a href="logout.php">Wyloguj się!</a> ]-- '.'  -- [ <a href="zmianadanych.php">Zmiana Danych!</a> ] -- </br></p>';
+			echo "ID: ".$_SESSION['id']."</br>";
+			echo "uprawnienia: ".$_SESSION['privilages']."</br>";
+			echo "Firma: ".$_SESSION['firma']."</br>";
 		?>
+		
+		<form action="laczenie.php" method="post">
+			<h1>Program BAZA SPERARE</h1>
+			<p>Kartoteka</p>
+			<input type="submit" value="Pacjenci" size="30"/></br></br>
+		
+			<input type="submit" value="Pracownicy" size="30"/></br></br>
+			
+			<input type="submit" value="Kontrahenci" size="30"/></br></br>
+		</form>
+		
 	</div>
 </div>
 

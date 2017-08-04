@@ -8,14 +8,25 @@
 		exit();
 	}
 	
+	require_once "connect.php";
+	
+	$polaczenie = @new mysqli($host, $user, $password, $db_name);
 	
 	//sprawdź czy wpisano cokolwiek w pole user
-	if(isset($_POST['login']))
+	if(isset($_POST['zmianalogin']))
 	{
 		$wszystko_OK=true;
 		
-		//sprawdzam poprawność nazwy użytkownika
-		$nick = $_POST['login'];
+		//sprawdzam poprawność danych
+		$nick = $_POST['zmianalogin'];
+		$passw = $_POST['haslo'];
+		$firm = $_POST['s_firma'];
+		
+		if ($_POST['button'] == "Anuluj")
+		{
+			header("Location: baza.php");
+			exit();
+		}
 		
 		//długość nazwy użytkownika
 		if((strlen($nick) < 3) || (strlen($nick) > 20))
@@ -24,10 +35,32 @@
 			$_SESSION['e_nick']="Nazwa użytkownika musi posiadać od 3 do 20 znaków";
 		}
 		
+		//długość hasła
+		if((strlen($passw) < 6) || (strlen($passw) > 20))
+		{
+			$wszystko_OK=false;
+			$_SESSION['e_haslo']="Hasło musi posiadać od 6 do 20 znaków";
+		}
+		
+		//Wybór firmy
+		if((strlen($firm) < 3) || (strlen($firm) > 20))
+		{
+			$wszystko_OK=false;
+			$_SESSION['e_firma']="Wprowadzono nieprawidłową firmę";
+		}
+		
 		if($wszystko_OK==true)
 		{
-			
-			$_SESSION['i_sukces']="Powodzenie zmiany danych";
+			$result = @$polaczenie->query(
+				sprintf("UPDATE `users` SET name='%s', password='%s', firma='%s' WHERE id='%s'",
+				mysqli_real_escape_string($polaczenie,$nick),
+				mysqli_real_escape_string($polaczenie,$passw),
+				mysqli_real_escape_string($polaczenie,$firm),
+				mysqli_real_escape_string($polaczenie,$_SESSION['id'])));
+		
+			header('Location: baza.php');
+			exit();
+			//$_SESSION['i_sukces']="Powodzenie zmiany danych";
 			//exit();
 		}
 		else
@@ -60,10 +93,15 @@
 				<h1>ZMIANA DANYCH</h1>
 				<?php
 				echo "<p>Użytkownik: ".$_SESSION['user'];
+				echo "<p>Hasło: ".$_SESSION['pass'];
+				echo "<p>Firma: ".$_SESSION['firma'];
 				?>
-				<p>(wpisz aktualne dane jeśli pozostaje bez zmian)</p></br>
+				<p>(pozostaw aktualne dane jeśli pozostają bez zmian)</p></br>
+				
 				<p>Nowa nazwa użytkownika:</p>
-				<input type="text" name="login" />
+				<?php
+				echo '<input type="text" name="zmianalogin" autocomplete="off" value="'.$_SESSION["user"].'"/>';
+				?>
 					<br></br>
 				<?php
 				if(isset($_SESSION['e_nick']))
@@ -75,12 +113,41 @@
 				?>
 				
 				<p>Hasło:</p>
-				<input type="text" name="haslo" />
+				<?php
+				echo '<input type="text" name="haslo" autocomplete="off" value="'.$_SESSION['pass'].'"/>';
+				?>
 					<br></br>
+				<?php
+				if(isset($_SESSION['e_haslo']))
+				{
+					echo '<div class="error">'.$_SESSION['e_haslo'].'</div>';
+					unset($_SESSION['e_haslo']);
+				}			
+				?>
+				
 				<p>Firma:</p>
-				<input type="text" name="firma" />
+				
+				<select name="s_firma">
+				  <option value="SPERARE" <?php if ($_SESSION['firma']=="SPERARE") echo "selected=\"selected\""; ?>>SPERARE</option>
+				  <option value="Marzena Oberska" <?php if ($_SESSION['firma']=="Marzena Oberska") echo "selected=\"selected\""; ?>>Marzena Oberska</option>
+				  <?php
+				  if ($_SESSION['firma']=="Admin")
+				  {
+					  echo '<option value="Admin" selected="selected">Admin</option>';
+				  }
+				  ?>
+				</select>
+				
 					<br></br>
-				<input type="submit" value="Zmiana" />
+				<?php
+				if(isset($_SESSION['e_firma']))
+				{
+					echo '<div class="error">'.$_SESSION['e_firma'].'</div>';
+					unset($_SESSION['e_firma']);
+				}			
+				?>
+				
+				<input type="submit" name="button" value="Zmiana" />
 				<?php
 				if(isset($_SESSION['i_sukces']))
 				{
@@ -88,6 +155,9 @@
 					unset($_SESSION['i_sukces']);
 				}			
 				?>
+				
+				<input type="submit" name="button" value="Anuluj" />
+				
 			</form>
 			
 			<?php
