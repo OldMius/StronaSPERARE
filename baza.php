@@ -34,15 +34,38 @@ session_start();
 			echo "Firma: ".$_SESSION['firma']."</br>";
 		?>
 		
-		<form action="laczenie.php" method="post">
-			<h1>Program BAZA SPERARE</h1>
-			<p>Kartoteka</p>
-			<input type="submit" value="Pacjenci" size="30"/></br></br>
+		<br></br>
+		<h1>Program BAZA SPERARE</h1>
 		
-			<input type="submit" value="Pracownicy" size="30"/></br></br>
+		<div class="MidBarLL">
+			<form action="nowypacjent.php" method="get">
+				
+				<p>Kartoteka</p>
+				
+				<input type="submit" name="button1" value="Nowy Pacjent" size="30"/></br></br>
+			</form>
 			
-			<input type="submit" value="Kontrahenci" size="30"/></br></br>
-		</form>
+			<form action="nowyplatnik.php" method="get">
+				<input type="submit" value="Nowy Płatnik" size="30"/></br></br>
+			</form>
+			
+			<form action="nowypracownik.php" method="get">
+				<input type="submit" value="Nowy Pracownik" size="30"/></br></br>
+			</form>
+		</div>
+		
+		<div class="MidBarRR">
+			<p>Faktury</p>
+			
+			<form action="faktura.php" method="get">	
+				<input type="submit" name="button1" value="Wystaw fakturę" size="30"/></br></br>
+			</form>
+			
+			<form action="danefirmy.php" method="get">
+				<input type="submit" value="Zmień dane firmy" size="30"/></br></br>
+			</form>
+		
+		</div>
 		
 	</div>
 </div>

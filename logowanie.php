@@ -15,7 +15,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>SPERARE >> Poradnia</title>
+	<title>SPERARE >> Logowanie</title>
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	

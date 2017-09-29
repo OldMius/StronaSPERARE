@@ -47,7 +47,7 @@ body
 .nav
 {
 	margin-top: 35px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	float: left;
 	text-align: center;
 	
@@ -65,6 +65,15 @@ body
 	margin: 0;
 	color: #99c2ff;
 	text-align: center;
+}
+
+#MidBarGUI
+{
+	border-top: 15px solid #4e4f97;
+	overflow: hidden;
+	width: 100%;
+	clear: both;
+	
 }
 
 .MidBarL
@@ -91,12 +100,42 @@ body
 	text-align: justify;
 }
 
+.MidBarLGUI
+{
+	
+	float: left;
+	width: 50%;
+	
+}
+
 .MidBarR
 {
 	height: 100%;
 	float: right;
 	width: 35%;
 	text-align: center;
+	display: block;
+}
+
+.MidBarRGUI
+{
+	margin-top: 50px;
+	float: left;
+	width: 50%;
+	
+}
+
+.MidBarLL
+{
+	float: left;
+	width: 50%;
+	display: block;
+}
+
+.MidBarRR
+{
+	float: left;
+	width: 50%;
 	display: block;
 }
 		
@@ -122,7 +161,7 @@ body
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.contentL h1
+.contentL h3
 {
 	
 }
@@ -132,7 +171,13 @@ body
 	font-size: 18px;
 }
 
-.contentL h3
+.title
+{
+	font-size: 18px;
+	text-align: center;
+}
+
+.contentL h1
 {
 	font-size: 20px;
 	color: gray;
@@ -165,7 +210,7 @@ body
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 	
-.contentR h1
+.contentR h3
 {
 	
 }
@@ -185,6 +230,7 @@ body
 	margin: 0px;
 	overflow: hidden;
 	color: #33001a;
+	
 }
 
 .navFooter
@@ -266,9 +312,9 @@ body
 .topMenu li
 {
 	float: left;
-	padding: 20px;
-	margin-left: 20px;
-	margin-right: 20px;
+	padding: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .topMenu li:hover
@@ -333,8 +379,7 @@ img
 .gui
 {
 	margin-left: 30px;
-	width: 600px;
-	
+	width: 100%;
 	clear: both;
 	
 }
@@ -342,4 +387,26 @@ img
 .gui a
 {
 	text-decoration: none;
+}
+
+.hr 
+{ 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+
+.form-element label 
+{
+    display: inline-bl;
+}
+
+input.break {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
 }
