@@ -101,9 +101,7 @@
 								
 								while ($row = $result -> fetch_assoc()) 
 								{
-									
-									
-									echo "<option value='" .$row['idPlatnika']."'> ".$row['nazwaPlatnika']." </option>";
+								echo "<option value='" .$row['idPlatnika']."'> ".$row['nazwaPlatnika']." </option>";
 								}					
 							}
 							

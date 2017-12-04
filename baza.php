@@ -42,15 +42,19 @@ session_start();
 				
 				<p>Kartoteka</p>
 				
-				<input type="submit" name="button1" value="Nowy Pacjent" size="30"/></br></br>
+				<input type="submit" name="button1" value="Nowy Pacjent" size="30" title="Zaarejestruj nowego pacjenta"/></br></br>
 			</form>
 			
 			<form action="nowyplatnik.php" method="get">
-				<input type="submit" value="Nowy Płatnik" size="30"/></br></br>
+				<input type="submit" value="Nowy Płatnik" size="30" title="Zarejestruj nowego płatnika - odbiorcę faktur"/></br></br>
 			</form>
 			
 			<form action="nowypracownik.php" method="get">
 				<input type="submit" value="Nowy Pracownik" size="30"/></br></br>
+			</form>
+			
+			<form action="kontakty.php" method="get">
+				<input type="submit" value="Kontakty" size="30" title="Dane kontaktowe: e-mail, tel., itp."/></br></br>
 			</form>
 		</div>
 		
@@ -62,7 +66,7 @@ session_start();
 			</form>
 			
 			<form action="danefirmy.php" method="get">
-				<input type="submit" value="Zmień dane firmy" size="30"/></br></br>
+				<input type="submit" value="Zmień dane firmy" size="30" title="Aktualizuj dane firmy"/></br></br>
 			</form>
 		
 		</div>

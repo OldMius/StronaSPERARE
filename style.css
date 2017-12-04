@@ -222,6 +222,7 @@ body
 
 #footer
 {
+	clear: both;
 	border-top: 15px solid #4e4f97;
 	background: url("img/grey_wash_wall.png");
 	background-repeat:repeat;

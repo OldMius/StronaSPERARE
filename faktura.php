@@ -27,35 +27,109 @@
 
 <body>
 
-	<form method="post" action="bazafaktura.php">
+
+
+	<form name="myform" method="post" action="faktura.php">
 	
 	<div id="container">
 		<div class="gui">
 			
+			<div class="MidBarLL">	
+				<h1>Wprowadź dane do faktury</h1>
 				
-					<h1>Wprowadź dane pacjenta</h1>
-					
-					<label>Nazwisko: </label>
-					<input type="text" name="nazwisko" autocomplete="off" >
-						<br></br>
 						
+				<?php
+					require_once "connect.php";
 					
+					$polaczenie = @new mysqli($host, $user, $password, $db_name);
+					
+					if($polaczenie->connect_errno!=0)
+						{
+						echo "Error: ".$polaczenie;
+						}
+					else
+						{
+							echo "<label>Wybierz Pacjenta: </label>";
+							echo "<select name='pacjent' style='width:300px; height:30px;'>";
+							echo "<option value=''></option>";
+							
+							$result1 = @$polaczenie->query(
+							sprintf("SELECT Nazwisko, Imie, idPacjenta, idPlatnika FROM pacjent"));
+							
+							
+							while ($row = $result1 -> fetch_assoc()) 
+								{
+								echo "<option value='" .$row['idPlatnika']."'> ".$row['Imie'].' '.$row['Nazwisko']."</option>";
+								}
+							echo "</select>";
+						}
+						
+					$polaczenie->close();
+				?>
+				
+				<br></br>
+				
+			
+			</div>
+
+			<div class="MidBarRR">
+			
+				<h2>Płatnik - odbiorca faktury</h2>
+				<?php
+					
+						require_once "connect.php";
+						
+						$polaczenie = @new mysqli($host, $user, $password, $db_name);
+						
+						if($polaczenie->connect_errno!=0)
+							{
+							echo "Error: ".$polaczenie;
+							}
+						else
+							{
+								echo $_POST['pacjent'];
+								
+								$result = @$polaczenie->query(
+								sprintf("SELECT nazwaPlatnika, FROM platnik WHERE IdPlatnika =1"));//.$_POST['platnik']));
+								//echo $result;
+								
+								$row = mysql_fetch_array($result);
+									echo $row['nazwaPlatnika'];
+								
+									
+									//echo $result['nazwaPlatnika']."</br>";
+									//echo $row['adresUlicaDom']."</br>";
+									//echo $row['adresKod']."</br>";
+									//echo $row['adresMiejscowosc']."</br>";
+									//echo $row['NIP']."</br>";
+									
+							}
+							
+						$polaczenie->close();
+					
+				?>
+			</div>
 			
 		</div>
+	
+	
+		<div id="footer">
+			
+				<input type="submit" name="button" value="Zapisz" style="margin-left:30px;"/>
+				<br></br>
+						
+				<button style="margin-left:30px;"><a href="baza.php">Anuluj</a></button>
+				<br></br>
+			
+		</div>	
 	</div>
 	
-	<div id="footer">
-		
-			<input type="submit" name="button" value="Zapisz" style="margin-left:30px;"/>
-			<br></br>
-					
-			<button style="margin-left:30px;"><a href="baza.php">Anuluj</a></button>
-			<br></br>
-		
-	</div>	
-
-	</form>
-	
+		</form>
+		<script>
+			function change(){
+				document.getElementById("myform").submit();
+			}
+		</script>
 </body>
 
 </html>
