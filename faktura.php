@@ -50,7 +50,7 @@
 					else
 						{
 							echo "<label>Wybierz Pacjenta: </label>";
-							echo "<select name='pacjent' style='width:300px; height:30px;'>";
+							echo "<select name='pacjent' style='width:300px; height:30px;' onchange='change()'>";
 							echo "<option value=''></option>";
 							
 							$result1 = @$polaczenie->query(
@@ -61,6 +61,7 @@
 								{
 								echo "<option value='" .$row['idPlatnika']."'> ".$row['Imie'].' '.$row['Nazwisko']."</option>";
 								}
+								
 							echo "</select>";
 						}
 						
@@ -75,6 +76,9 @@
 			<div class="MidBarRR">
 			
 				<h2>Płatnik - odbiorca faktury</h2>
+
+
+				
 				<?php
 					
 						require_once "connect.php";
@@ -87,13 +91,13 @@
 							}
 						else
 							{
-								echo $_POST['pacjent'];
+								//echo $_POST['pacjent'];
 								
 								$result = @$polaczenie->query(
 								sprintf("SELECT nazwaPlatnika, FROM platnik WHERE IdPlatnika =1"));//.$_POST['platnik']));
 								//echo $result;
 								
-								$row = mysql_fetch_array($result);
+								//$row = mysql_fetch_array($result);
 									echo $row['nazwaPlatnika'];
 								
 									
@@ -108,6 +112,9 @@
 						$polaczenie->close();
 					
 				?>
+				
+				<label id="Wpacjent"></label>
+				
 			</div>
 			
 		</div>
@@ -125,11 +132,17 @@
 	</div>
 	
 		</form>
-		<script>
-			function change(){
-				document.getElementById("myform").submit();
-			}
-		</script>
+		
+<!-- //***************Próba użycia JavaScript do obsługi dynamicznej zdarzenia -->
+				
+				<script>
+					function change(){
+						document.getElementById("Wpacjent").innerHTML = "UDAŁO SIĘ";
+					}
+				</script>
+				
+<!-- //**************/ -->
+
 </body>
 
 </html>

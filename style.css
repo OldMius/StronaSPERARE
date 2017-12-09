@@ -2,7 +2,7 @@ body
 {
 	
 	color: #004d99;
-	margin: 0;
+	/*margin: 0;*/
 	height: 100%;
 	width: 100%;
 	background: url("img/subtle_white_mini_waves.png");
@@ -406,8 +406,388 @@ img
     display: inline-bl;
 }
 
-input.break {
+input.break 
+{
     word-wrap: break-word;
     word-break: break-all;
     height: 80px;
+}
+
+/* ********************************************************* */
+
+#Faktura
+{
+	margin: auto;
+	background-color: #ffffff;
+	/*ilość px dobrana do formatu A4 (Standardowo do wydruku przyjmuje się 72 piksele na cal - 210 x 297 mm, czyli w calach 8.26 x 11.69. To mnożymy przez 72, i otrzymujemy: 595 x 842) */
+	height: 842px;
+	width: 595px;
+	/*border: 3px solid blue;*/
+	color: #000;
+	font-size: 10px;
+}
+
+.LogoF
+{
+	margin-left: 10px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+	float: left;
+	/*border: 3px solid red;*/
+	height: 70px;
+	width: 45%;
+}
+
+.LogoF img
+{
+	height: 65px;
+	width: 80px;
+	border-style: none;
+	box-shadow: none;
+}
+
+.MiejsceData
+{
+	margin-left: 10px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+	/*font-size: 10px;*/
+	float: right;
+	/*border: 3px solid yellow;*/
+	height: 70px;
+	width: 45%;
+	text-align: right;
+}
+
+.MiejsceData label
+{
+	padding-right: 15px;
+}
+
+.Belka
+{
+	margin: auto;
+	clear: both;
+	height: 25px;
+	width: 95%;
+	/*border: 3px solid blue;*/
+	background-color: #bfbfbf;
+	font-weight: bold;
+	line-height: 25px;
+	text-indent: 150px;
+	vertical-align: middle;
+	font-size: 16px;
+}
+
+#Oryginal
+{
+	float: right;
+	padding-right: 15px;
+}
+
+#NrFaktury
+{
+	padding-left: 15px;
+}
+
+.Sprzedawca
+{
+	margin-left: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: left;
+	border: 1px solid gray;
+	height: 150px;
+	width: 46%;
+	padding-left: 5px;
+}
+
+.Sprzedawca label
+{
+		
+}
+
+.S1
+{
+	margin-top: 10px;
+	
+}
+
+.S2
+{
+	margin-top: 5px;
+	
+}
+
+.S3
+{
+	margin-top: 0px;
+	
+}
+
+.S4
+{
+	margin-top: 5px;
+	
+}
+
+.S5
+{
+	margin-top: 5px;
+	
+}
+
+.S6
+{
+	margin-top: 0px;
+	
+}
+
+.S7
+{
+	margin-top: 5px;
+	
+}
+
+.Nabywca
+{
+	margin-right: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: right;
+	border: 1px solid gray;
+	height: 150px;
+	width: 46%;
+	padding-right: 5px;
+	text-align: right;
+}
+
+.Nabywca label
+{
+	display: block;
+}
+
+.N1 /*Płatnik*/
+{
+	margin-top: 8px;
+	
+	display: block;
+}
+
+.N2
+{
+	margin-top: 4px;
+
+	display: block;
+}
+
+.N3
+{
+	margin-top: 0px;
+
+	display: block;
+}
+
+.N4
+{
+	margin-top: 4px;
+	display: block;
+}
+
+.Odbiorca
+{
+	float: right;
+	margin-top: 4px;
+	display: block;
+	/*display: none;*/
+}
+
+.O1
+{
+	margin-top: 4px;
+
+}
+
+.O2
+{
+	margin-top: 4px;
+
+}
+
+.O3
+{
+	margin-top: 0px;
+
+}
+
+.O4
+{
+	margin-top: 4px;
+
+}
+
+.Tabela
+{
+	clear: both;
+	margin: 10px;
+	/*border: 3px solid blue;*/
+	/*height: 15%;*/
+	/*width: 95%;*/
+}
+
+.Tabela table, th, td
+{
+	/*width: 90%;*/
+	border: 2px solid black;
+	border-collapse: collapse;
+	
+}
+
+.Lp
+{
+	width: 17px;
+}
+
+.NazwaUslugi
+{
+	width: 195px;
+}
+
+.Jm
+{
+	width: 30px;
+}
+
+.Ilosc
+{
+	width: 30px;
+}
+
+.Cena
+{
+	width: 50px;
+}
+
+.VatPr
+{
+	width: 30px;
+}
+
+.VatZl
+{
+	width: 50px;
+}
+
+.BezVat
+{
+	width: 50px;
+}
+
+.ZVat
+{
+	width: 50px;
+}
+
+.Naglowki
+{
+	border: 3px solid black;
+	background-color: #bfbfbf;
+}
+
+.Platnosc
+{
+	margin: 10px;
+	float: left;
+	border: 3px solid red;
+	height: 15%;
+	width: 35%;
+}
+
+.TabelaSum
+{
+	margin: 10px;
+	float: right;
+	border: 3px solid yellow;
+	height: 10%;
+	width: 55%;
+}
+
+.TabelaSum table,th, td
+{
+	margin-right: 10px;
+    margin-left: auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+	
+}
+
+.Razem
+{
+	width: 80px;
+}
+
+.ZlVat
+{
+	width: 50px;
+}
+
+.WartoscBezVat
+{
+	width: 50px;
+}
+
+.WartoscZVat
+{
+	width: 50px;
+}
+
+.Sumy
+{
+	background-color: #bfbfbf;
+}
+
+.Podsumowanie
+{
+	clear: both;
+	margin: 10px;
+	border: 3px solid blue;
+	height: 5%;
+	width: 95%;
+}
+
+.Opis
+{
+	clear: both;
+	margin: 10px;
+	border: 3px solid blue;
+	height: 5%;
+	width: 95%;
+}
+
+.PodpisN
+{
+	margin: 10px;
+	float: left;
+	/*border: 1px solid gray;*/
+	height: 10%;
+	width: 45%;
+	font-size: 10px;
+}
+
+.PodpisS
+{
+	margin: 10px;
+	float: right;
+	/*border: 1px solid gray;*/
+	height: 10%;
+	width: 45%;
+	font-size: 10px;
+	text-align: right;
+}
+
+#Podpis
+{
+	float: right;
 }

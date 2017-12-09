@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8" />
+	<title>SPERARE - Faktura</title>
+	
+		
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+	
+</head>
+
+<body>
+
+		<div id="Faktura">
+	
+			<div class="LogoF">
+				<img src="img/reka3.png">
+			</div><!-- zamknięcie diva LogoF -->
+			
+			<div class="MiejsceData">
+				<label>Miejsce wystawienia:</label> 
+				<label id="Miejsce">Katowice</label>
+				<p>
+					<label>Data wystawienia: </label>
+					<label id="DataW">09-12-2017</label>
+				</p>
+				<p>
+					<label>Data sprzedaży/wykonania usługi: </label>
+					<label id="DataS">09-12-2017</label>
+				</p>
+			</div> <!-- zamknięcie diva MiejsceData -->
+			
+			<div class="Belka">
+				<label>Faktura nr:</label>
+				<label id="NrFaktury">1/1/2017</label>
+				<label id="Oryginal">ORYGINAŁ</label>
+			</div> <!-- zamknięcie diva Belka -->
+			
+			<div class="Sprzedawca">
+				<label style="font-weight: bold;">Sprzedawca:</label>
+				<div class="S1">
+					<label>Sabina Błędzińska Centrum Terapeutyczne SPERARE</label>
+				</div>
+				<div class="S2">
+					<label>ul. Głogowska 28</label>
+				</div>
+				<div class="S3">
+					<label>40-660 Katowice</label>
+				</div>
+				<div class="S4">
+					<label>NIP: 549-202-75-55; REGON: 360848725</label>
+				</div>
+				<div class="S5">
+					<label>www.sperare.pl; e-mail: sperare@sperare.pl</label>
+				</div>
+				<div class="S6">
+					<label>tel.: 604-149-003</label>
+				</div>
+				<div class="S7">
+					<label>Bank PEKAO SA, nr konta: 06 1240 4155 1111 0010 6271 0270</label>
+				</div>
+			</div> <!-- zamknięcie diva Sprzedawca -->
+			
+			<div class="Nabywca">
+				<label style="font-weight: bold;">Nabywca:</label>
+				
+				<div class="N1">
+					<label id="Platnik">Płatnik</label>
+				</div>
+				<div class="N2">
+					<label id="Adres1N">ul. ?????????????</label>
+				</div>
+				<div class="N3">
+					<label id="Adres2N">XX-XXX YYYYYYYYYY</label>
+				</div>
+				<div class="N4">
+					<label id="NipN">NIP: yyy-yyy-yy-yy</label>
+				</div>
+				<div class="Odbiorca">
+					<label style="font-weight: bold;">Odbiorca:</label>
+					
+					<div class="O1">
+						<label id="NazwaO">Odbiorca faktury</label>
+					</div>
+					<div class="O2">
+						<label id="Adres1Odb">ul. CośTam</label>
+					</div>
+					<div class="O3">
+						<label id="Adres2Odb">11-111 CośTam CośTam</label>
+					</div>
+					<div class="O4">
+						<label id="NipO">NIP: 111-111-11-11</label>
+					</div>
+				</div>
+				
+			</div> <!-- zamknięcie diva Nabywca -->
+			
+			<div class="Tabela">
+				<table>
+					<tr class="Naglowki">
+						<th rowspan="2">Lp.</th>
+						<th rowspan="2">Nazwa usługi/towaru</th> 
+						<th rowspan="2">j.m.</th>
+						<th rowspan="2">Ilość</th>
+						<th rowspan="2">Cena [zł]</th>
+						<th colspan="2">Podatek VAT</th>
+						<th rowspan="2">Watość bez VAT</th>
+						<th rowspan="2">Watość z VAT</th>
+					</tr>
+					<tr class="Naglowki">
+						
+						<th>[%]</th>
+						<th>[zł]</th>
+						
+					</tr>
+					<tr class="Linia1">
+						<td class="Lp">1</td>
+						<td class="NazwaUslugi"></td> 
+						<td class="Jm"></td>
+						<td class="Ilosc"></td>
+						<td class="Cena"></td>
+						<td class="VatPr"></td>
+						<td class="VatZl"></td>
+						<td class="BezVat"></td>
+						<td class="ZVat"></td>
+					</tr>
+					
+				</table>
+			</div> <!-- zamknięcie diva Tabela -->
+			
+			<div class="Platnosc">
+			
+			</div> <!-- zamknięcie diva Płatność -->
+			
+			<div class="TabelaSum">
+				<table>
+					<tr class="zw">
+						<td>zw</td>
+						<td>0</td> 
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<tr class="zero">
+						<td>0%</td>
+						<td>0</td> 
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<tr class="osiem">
+						<td>8%</td>
+						<td>0</td> 
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<tr class="dwatrzy">
+						<td>23%</td>
+						<td>0</td> 
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<tr class="Sumy">
+						<th class="Razem">RAZEM</th>
+						<th class="ZlVat">0,00</th> 
+						<th calss="WartoscBezVat">0,00</th>
+						<th class="WartoscZVat">0,00</th>
+					</tr>
+				</table>
+				
+				<p>Stawka "zw" - zwolnienie z podatku na podstawie art. 43 ust. 1 pkt 19 ustawy o VAT</p>
+			</div> <!-- zamknięcie diva TabelaSum -->
+			
+			<div class="Podsumowanie">
+			
+			</div> <!-- zamknięcie diva Podsumowanie -->
+			
+			<div class="Opis">
+			
+			</div> <!-- zamknięcie diva Opis -->
+			
+			<div class="PodpisN">
+				<label>Podpis Nabywcy:</label><br></br><br></br><br></br>
+				<p>.....................................................................................</p>
+			</div> <!-- zamknięcie diva TabelaSum -->
+			
+			<div class="PodpisS">
+				<label id="Podpis">Podpis Sprzedawcy:</label><br></br><br></br><br></br>
+				<p>.....................................................................................</p>
+			</div> <!-- zamknięcie diva TabelaSum -->
+
+		</div> <!-- zamknięcie diva Faktura -->
+	
+</body>
+
+</html>
