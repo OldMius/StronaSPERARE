@@ -1,6 +1,7 @@
-body
+﻿body
 {
-	color: #003366;/*#004d99;*/
+	
+	color: #004d99;
 	/*margin: 0;*/
 	height: 100%;
 	width: 100%;
@@ -10,7 +11,7 @@ body
 
 #container
 {
-	font-family: "Verdana", Sans Serif;
+	font-family: 'Crete Round', sans-serif;
 	
 }
 
@@ -18,14 +19,13 @@ body
 .header
 {
 	height: 100px;
-	/*font-size: 20px;*/
-	
+	font-size: 20px;
 }
 
 .logo
 {
 	float: left;
-	width: 28%;
+	width: 29%;
 	text-align: center;
 	height: 100%;
 	
@@ -62,7 +62,7 @@ body
 	clear: both;
 	background-image: url("img/tlo2-min.jpg");
 	opacity: 0.8;
-	margin: 0px 0px 0px 0px;
+	margin: 0;
 	color: #99c2ff;
 	text-align: center;
 }
@@ -83,19 +83,21 @@ body
 	width: 50%;
 	margin-left: 30px;
 	margin-right: 30px;
-	text-align: left;
+	text-align: justify;
+	letter-spacing: 2px;
 }
 
 .MidBarL > h1
 {
 	color: #ffffff;
 	text-align: center;
-	font-size: 32px;
+	font-size: 34px;
 }
 
 .MidBarL > h2
 {
-	font-size: 24px;
+	font-size: 22px;
+	text-align: justify;
 }
 
 .MidBarLGUI
@@ -143,8 +145,7 @@ body
 	clear: both;
 	width: 100%;
 	margin-top: 10px;
-	margin-bottom: 10px;
-
+	margin-bottom: 10px;	
 }
 
 .contentL
@@ -172,27 +173,24 @@ body
 
 .title
 {
-	font-size: 16px;
+	font-size: 18px;
 	text-align: center;
 }
 
 .contentL h1
 {
 	font-size: 20px;
-
+	color: gray;
 }
 
 .contentL h4
 {
-	font-size: 12px;
+	font-size: 14px;
 }
 
-#Tuslugi th, td
+#Tuslugi
 {
 	border-spacing: 1.2rem;
-	border: 0px;
-	padding: 5px;
-	font-size: 14px;
 }
 
 .pierwszy
@@ -300,27 +298,25 @@ body
 .topMenu
 {
 	padding: 0;
-	margin: 0px;
+	margin: 0;
 	list-style-type: none;
-	line-height: 150%;
+	line-height: 200%;
 	display: inline-block;
 }
 
-.topMenu ol a
+.topMenu a
 {
 	text-decoration: none;
 	display: block;
-	text-decoration: none;
 }
 
 .topMenu li
 {
 	float: left;
-	padding: 15px;
-	margin-left: 19px;
-	margin-right: 19px;
+	padding: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
-
 
 .topMenu li:hover
 {
@@ -358,7 +354,7 @@ body
 	margin-top: 30px;
 	border: 5px solid #4e4f97;
 	border-radius: 15px;
-	background: url('img/Reka4-min.png') no-repeat;
+	background: url('img/Reka3.png') no-repeat;
 	width: 400px;
 	height: 300px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -416,12 +412,6 @@ input.break
     word-break: break-all;
     height: 80px;
 }
-
-.lista li
-{
-	margin: 10px;
-}
-
 
 /* ********************************************************* */
 

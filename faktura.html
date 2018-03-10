@@ -124,12 +124,12 @@
 					<tbody id="tBody">
 						<tr id="Linia1" onChange="aktualizacja1(this)">
 							<td class="Lp">1</td>
-							<td class="NazwaUslugi">Terapia logopedyczna</td> 
+							<td class="NazwaUslugi">Wybierz Nazwę Usługi</td> 
 							<td class="Jm">szt.</td>
 							<td class="Ilosc"><input id="IloscGodzin"></input></td>
 							<td class="Cena"><input id="CenaZajec"></input></td>
-							<td class="VatPr">8%</td>
-							<td class="VatZl">2.710</td>
+							<td class="VatPr">zw</td>
+							<td class="VatZl"></td>
 							<td class="BezVat"></td>
 							<td class="ZVat"></td>
 						</tr>
@@ -139,20 +139,7 @@
 					</tfoot>
 				</table>
 				
-				<script>
 				
-				
-					var table = document.getElementById("TabelaSprzedazy");
-					var number;
-					
-					document.getElementById("IloscGodzin").value = 15.5;
-					document.getElementById("CenaZajec").value = 10;
-					
-					//aktualizacja();
-					
-					
-					
-				</script>
 			</div> <!-- zamknięcie diva Tabela -->
 			
 			<div class="Platnosc">
@@ -220,9 +207,12 @@
 		<div id="menuCol">
 			<label>Dodaj nowy wiersz/usługę w tabeli sprzedaży</label><br></br>
 			<button type="button" onclick="nowyWiersz()">Nowa linia!</button>
-		
+		<br></br>
+			<label>Drukuj fakturę!</label><br></br>
+			<button type="button" onclick="PrintElem('Faktura')">Druk</button>
 		</div> <!-- zamknięcie diva menuCol -->
-
+		
+			
 		<script>
 		
 		
@@ -243,7 +233,6 @@
 				y = parseFloat(y.replace(",","."));	
 				x *= y;
 				x = x.toFixed(2);
-				//x = x.toLocaleString('en-US', {minimumFractionDigits: 2});
 				
 				table.rows[changedRow].cells[7].innerHTML = x;
 					
@@ -257,7 +246,6 @@
 						
 				x *= number;
 				x = x.toFixed(2);
-				//x = x.toLocaleString('en-US', {minimumFractionDigits: 2});
 				
 				table.rows[changedRow].cells[6].innerHTML = x;
 						
@@ -267,8 +255,7 @@
 				x = parseFloat(x.replace(",","."));
 				y = parseFloat(y.replace(",","."));
 				x += y;
-				x = x.toFixed(2);
-				//x = x.toLocaleString('en-US', {minimumFractionDigits: 2});	
+				x = x.toFixed(2);	
 				
 				table.rows[changedRow].cells[8].innerHTML = x;
 			
@@ -276,7 +263,6 @@
 			//sumy z tabeli sprzedaży dla poszczególnych podatków
 				var rowCount = table.rows.length;			
 				var sum1 = 0, sum2 = 0, sum3 = 0;
-				//var table = document.getElementById("TabelaSprzedazy");
 				
 				var tds = table.getElementsByClassName('VatZl');
 				sum1 = 0;
@@ -310,7 +296,6 @@
 			
 			
 				var table2 = document.getElementById("PodsumowanieVat");
-				//var table = document.getElementById("TabelaSprzedazy");
 				var number;
 				var xx = table.rows[2].cells[5].innerHTML;
 				if(xx == "zw")
@@ -376,7 +361,16 @@
 				clone.id = "newID"; // change id or other attributes/contents
 				table.appendChild(clone); // add new row to end of table
 				
+				var rowCount = table.rows.length;
+				
+				table.rows[rowCount-1].cells[0].innerHTML = rowCount - 2;
+				
 				aktualizacja1(2);
+			}
+			
+			function PrintElem(printpage)
+			{
+				window.alert("Niebede drukowała!!!!!");
 			}
 			
 			aktualizacja1(2);

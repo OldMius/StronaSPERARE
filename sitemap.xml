@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.sperare.pl/</loc>
+  <lastmod>2017-12-18T09:41:28+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/index.html</loc>
+  <lastmod>2017-12-18T09:41:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/onas.html</loc>
+  <lastmod>2017-12-18T09:41:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/galeria.html</loc>
+  <lastmod>2017-12-18T09:41:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/uslugi.html</loc>
+  <lastmod>2017-12-18T09:41:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/kontakt.html</loc>
+  <lastmod>2017-12-18T09:41:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/poradnia.html</loc>
+  <lastmod>2017-12-18T09:41:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/szkolenia.html</loc>
+  <lastmod>2017-12-18T09:41:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/logowanie.php</loc>
+  <lastmod>2017-12-18T10:26:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/poradnia/statut%20poradni.pdf</loc>
+  <lastmod>2017-09-20T15:57:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/szkolenia/Oferta%20szkolen.pdf</loc>
+  <lastmod>2017-09-20T15:57:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/szkolenia/Regulamin%20szkolenia.pdf</loc>
+  <lastmod>2017-09-20T15:57:13+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.sperare.pl/szkolenia/formularz%20zgłoszeniowy%20-%20szkolenie.pdf</loc>
+  <lastmod>2017-09-20T15:57:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+</urlset>
