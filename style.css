@@ -17,9 +17,9 @@ body
 
 .header
 {
-	height: 100px;
+	/*height: 80px;*/
 	/*font-size: 20px;*/
-	
+	overflow: hidden;
 }
 
 .logo
@@ -40,14 +40,14 @@ body
 
 .logo h2
 {
-	
 	font-size: 20px;
+	margin: 0px;
 }
 
 .nav
 {
-	margin-top: 35px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	float: left;
 	text-align: center;
 	
@@ -95,7 +95,7 @@ body
 
 .MidBarL > h2
 {
-	font-size: 24px;
+	font-size: 16px;
 }
 
 .MidBarLGUI
@@ -108,7 +108,6 @@ body
 
 .MidBarR
 {
-	height: 100%;
 	float: right;
 	width: 35%;
 	text-align: center;
@@ -144,7 +143,13 @@ body
 	width: 100%;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
 
+.contentH
+{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
 }
 
 .contentL
@@ -205,11 +210,13 @@ body
 	border: 2px solid #4e4f97;
 	border-top-width: 5px;
 	border-radius: 10px;
-	padding-left: 10px;
-	margin-left: 60px;
-	float: left;
-	width: 40%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding-left: 10px;
+	padding-bottom: 10px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	float: left;
+	width: 43%;
 }
 	
 .contentR h3
@@ -222,15 +229,80 @@ body
 	color: gray;
 }
 
+.contentB
+{
+	clear: both;
+	border: 2px solid #4e4f97;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 80%;
+}
+
+.artykul
+{
+	color: #f0f0f5;
+	background-color: #666699;
+	margin-top: 10px;
+	border: 2px solid #4e4f97;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 560px;
+}
+
+.artykul h1,
+.artykul h2,
+.artykul p
+{
+	padding: 10px;
+	color: #f0f0f5;
+}
+
+.tytul
+{
+	float: left;
+	padding-left: 5px;
+}
+
+.dataArtykul
+{
+	float: left;
+	padding-left: 10px;
+	font-size: 12px;
+}
+
+.autor
+{
+	float: left;
+	padding-left: 10px;
+	font-size: 12px;
+}
+
+.tresc
+{
+	clear: both;
+	padding-left: 5px;
+}
+
+.tresc a
+{
+	color: 	 #ffb3b3;
+	text-decoration: none;
+}
+
 #footer
 {
 	clear: both;
 	border-top: 15px solid #4e4f97;
 	background: url("img/grey_wash_wall.png");
 	background-repeat:repeat;
-	clear: both;
 	text-align: left;
-	margin: 0px;
+	/*margin: 0px;*/
 	overflow: hidden;
 	color: #33001a;
 	
@@ -238,6 +310,7 @@ body
 
 .navFooter
 {
+	overflow: hidden;
 	clear: both;
 	width: 100%;
 	padding: 0px;
@@ -299,7 +372,7 @@ body
 
 .topMenu
 {
-	padding: 0;
+	padding: 0px;
 	margin: 0px;
 	list-style-type: none;
 	line-height: 150%;
@@ -317,8 +390,8 @@ body
 {
 	float: left;
 	padding: 15px;
-	margin-left: 19px;
-	margin-right: 19px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 
@@ -355,12 +428,12 @@ body
 
 .rekaLogoImg
 {
-	margin-top: 30px;
+	margin-top: 10px;
 	border: 5px solid #4e4f97;
 	border-radius: 15px;
 	background: url('img/Reka4-min.png') no-repeat;
-	width: 400px;
-	height: 300px;
+	width: 350px;
+	height: 263px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
